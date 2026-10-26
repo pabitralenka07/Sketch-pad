@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pencil 3D • Interactive WebGL Sketchpad</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✏️</text></svg>">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="bg"></div>
+
+      <!-- Intro Splash Screen (auto-fades) -->
+      <div id="intro">
+        <div class="intro-card">
+          <div class="intro-icon">✏️</div>
+          <h2 class="intro-title">Pencil 3D Sketchpad</h2>
+          <p class="intro-subtitle">Interactive 3D WebGL pencil with real-time vector sketching</p>
+          <div class="intro-tip">Click and drag to sketch • Move mouse to tilt</div>
+        </div>
+      </div>
+
+      <!-- Header Badge -->
+      <div id="header-badge">
+        <h1>✏️ Pencil 3D</h1>
+        <span>WebGL + Canvas 2D</span>
+      </div>
+
+      <!-- Trackpad Mode Badge -->
+      <div id="trackpad-badge" title="Trackpad Tip: Click & drag OR hold Spacebar to draw smoothly">
+        <span>🖐️ Trackpad: Hold <kbd>Space</kbd> or Click to Draw</span>
+      </div>
+
+      <!-- Canvas & Sketchpad elements -->
+      <div id="sketchpad"></div>
+      <canvas id="sketch"></canvas>
+      <canvas id="pencil3D"></canvas>
+
+      <!-- Glassmorphic Toolbar Dock -->
+      <div id="toolbar">
+        <!-- Color palette -->
+        <div class="tool-group" id="color-palette">
+          <div class="color-swatch active" data-color="#2d3139" style="background: #2d3139;" title="Graphite (HB)"></div>
+          <div class="color-swatch" data-color="#2563eb" style="background: #2563eb;" title="Ink Blue"></div>
+          <div class="color-swatch" data-color="#dc2626" style="background: #dc2626;" title="Crimson Red"></div>
+          <div class="color-swatch" data-color="#16a34a" style="background: #16a34a;" title="Emerald Green"></div>
+          <div class="color-swatch" data-color="#d97706" style="background: #d97706;" title="Amber Gold"></div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Stroke size -->
+        <div class="tool-group" id="stroke-sizes">
+          <button class="size-btn" data-size="2" title="Fine Stroke">
+            <span style="width: 4px; height: 4px;"></span>
+          </button>
+          <button class="size-btn active" data-size="5" title="Medium Stroke">
+            <span style="width: 7px; height: 7px;"></span>
+          </button>
+          <button class="size-btn" data-size="12" title="Broad Stroke">
+            <span style="width: 11px; height: 11px;"></span>
+          </button>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Actions -->
+        <div class="tool-group">
+          <button id="btn-undo" class="tool-btn" title="Undo last stroke (⌘Z)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v6h6"/><path d="M21 17a9 9 0 00-9-9 9 9 0 00-6 2.3L3 13"/></svg>
+            Undo
+          </button>
+          <button id="btn-clear" class="tool-btn" title="Clear sketchpad">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg>
+            Clear
+          </button>
+          <button id="btn-export" class="tool-btn primary" title="Export sketch as image">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Export
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r77/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

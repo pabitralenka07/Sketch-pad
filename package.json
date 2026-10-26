@@ -1,0 +1,31 @@
+{
+  "name": "sketch-pad",
+  "version": "1.0.0",
+  "description": "Interactive 3D WebGL Pencil & Canvas Sketchpad",
+  "main": "dist/index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000 --directory dist",
+    "live": "npx -y live-server dist --port=8080 --open",
+    "dev": "npx -y live-server dist --port=8080 --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pabitralenka07/Sketch-pad.git"
+  },
+  "keywords": [
+    "threejs",
+    "webgl",
+    "canvas-2d",
+    "sketchpad",
+    "drawing-tool",
+    "interactive-3d",
+    "trackpad-friendly",
+    "force-touch"
+  ],
+  "author": "Pabitra Lenka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pabitralenka07/Sketch-pad/issues"
+  },
+  "homepage": "https://github.com/pabitralenka07/Sketch-pad#readme"
+}
