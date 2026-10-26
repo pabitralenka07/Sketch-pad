@@ -7,6 +7,9 @@
 ![Three.js](https://img.shields.io/badge/Three.js-r77-brightgreen.svg)
 ![Canvas](https://img.shields.io/badge/HTML5-Canvas%202D-yellow.svg)
 ![Trackpad](https://img.shields.io/badge/Trackpad-Force%20Touch%20Ready-purple.svg)
+[![Deployment](https://img.shields.io/badge/Vercel-Live%20Demo-black?logo=vercel)](https://sketchpad-flax.vercel.app/)
+
+🌐 **Live Demo**: [https://sketchpad-flax.vercel.app](https://sketchpad-flax.vercel.app)
 
 ---
 

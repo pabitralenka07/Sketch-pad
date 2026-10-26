@@ -4,6 +4,7 @@
   "description": "Interactive 3D WebGL Pencil & Canvas Sketchpad",
   "main": "dist/index.html",
   "scripts": {
+    "build": "mkdir -p public && cp -r dist/* public/",
     "start": "python3 -m http.server 8000 --directory dist",
     "live": "npx -y live-server dist --port=8080 --open",
     "dev": "npx -y live-server dist --port=8080 --open"
